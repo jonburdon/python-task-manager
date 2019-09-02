@@ -68,3 +68,6 @@ In terminal
     git init
     git add .
     git commit -m 'Initial commit'
+    heroku git:remote -a task-manager-learning-project
+    git push heroku master
+    sudo pip3 freeze --local > requirement.txt
