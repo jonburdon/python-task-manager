@@ -144,3 +144,12 @@ Refactor so that tasks.html extends base.html template
 * Add Materialize css link in head
 * Add jquery and javascript links in footer.
 * Add Google icons link to header.
+
+### Adding an accordian from Materialize
+
+* Add 'Collapsible' component from Materialise website:
+* https://materializecss.com/collapsible.html
+* Copy and paste the sample html in to tasks.html
+* paste jquery initialization code in the base.html template.
+
+### Dynamically adding tasks to the Accordian elements.
