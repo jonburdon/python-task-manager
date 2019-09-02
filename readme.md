@@ -48,6 +48,7 @@ Get data in place first, on atlas mongo website:
 * Open command palette, type **Python: Select Interpreter** and select the virtual environment in your project folder that starts with ./env or .\env
 * In command pallette, run **Terminal: Create New Integrated Terminal**
 * Install Flask in the virtual environment with **pip3 install Flask**
+* **pip3 install flask_pymongo**
 * Create app.py (In flask, the convention is to use run.py or app.py)
 * **from flask import Flask** to import Flask in app.py Capital F indicates a class name.
 * Create instance of flask within app.py with **app = Flask(name)**
@@ -81,7 +82,7 @@ In terminal
     git commit -m 'Added requirements'
     git push heroku master (fails - needs procfile)
     echo web: python app.py > Procfile
-    git push heroku master 
+    _git push heroku master _
     heroku ps:scale web=1
 
 On Heroku web interface:
