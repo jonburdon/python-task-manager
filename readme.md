@@ -82,7 +82,7 @@ In terminal
     git commit -m 'Added requirements'
     git push heroku master (fails - needs procfile)
     echo web: python app.py > Procfile
-    _git push heroku master _
+    git push heroku master
     heroku ps:scale web=1
 
 On Heroku web interface:
