@@ -138,3 +138,9 @@ Set body as:
     {% endfor %}*
 
 
+Refactor so that tasks.html extends base.html template
+
+### Adding Materialize to base.html
+* Add Materialize css link in head
+* Add jquery and javascript links in footer.
+* Add Google icons link to header.
