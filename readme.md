@@ -54,6 +54,12 @@ Get data in place first, on atlas mongo website:
 * In Terminal **python3 -m flask run** to run the app and serve
 
 ### Deploying to Heroku
+#### Four steps to deploying in Heroku
+1. Create Heroku app
+2. Link git repo
+3. Create requirements.txt
+4. Create Procfile
+
 
 In terminal:
 
@@ -75,3 +81,4 @@ In terminal
     git commit -m 'Added requirements'
     git push heroku master (fails - needs procfile)
     echo web: python app.py > Procfile
+    git push heroku master 
