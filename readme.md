@@ -152,4 +152,8 @@ Refactor so that tasks.html extends base.html template
 * Copy and paste the sample html in to tasks.html
 * paste jquery initialization code in the base.html template.
 
-### Dynamically adding tasks to the Accordian elements.
+### Binding data from database to the Accordion elements.
+
+Use jinja formatting used before within UL tags.
+Wrap a list item within jinja tags in a For loop.
+Add task description jinja tag in collapsible part of accordion.
