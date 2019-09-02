@@ -45,12 +45,12 @@ Get data in place first, on atlas mongo website:
 ### Setup using VS Code on a Mac
 * **sudo pip3 install Flask** to install Flask
 * **python3 -m venv env** to install virtual environment in that folder
-* Open command pallette, type **Python: Select Interpreter** and select the virtual environment in your project folder that starts with ./env or .\env
+* Open command palette, type **Python: Select Interpreter** and select the virtual environment in your project folder that starts with ./env or .\env
 * In command pallette, run **Terminal: Create New Integrated Terminal**
 * Install Flask in the virtual environment with **pip3 install Flask**
 * Create app.py (In flask, the convention is to use run.py or app.py)
 * **from flask import Flask** to import Flask in app.py Capital F indicates a class name.
-* Create instance of flash within app.py with **app = Flask(name)**
+* Create instance of flask within app.py with **app = Flask(name)**
 * In Terminal **python3 -m flask run** to run the app and serve
 
 ### Deploying to Heroku
@@ -82,3 +82,58 @@ In terminal
     git push heroku master (fails - needs procfile)
     echo web: python app.py > Procfile
     git push heroku master 
+    heroku ps:scale web=1
+
+On Heroku web interface:
+Specify IP 0.0.0.0 and Port 5000
+
+### Connecting to MongoDB Atlas
+
+    sudo pip3 install flask-pymongo
+    sudo pip3 install dnspython
+
+in app.py:
+
+    from flask_pymongo import PyMongo
+    from bson.objectid import ObjectId
+
+    app.config["MONGO_DBNAME"] = 'task_manager'
+    app.config[MONGO_URI] = '<<CONNECTION STRING WITH DB NAME AND PASSWORD'
+
+On Mongo Website: Overview -> Connect -> Connect my app -> Choose Python3.6 or later
+
+Copy connection string
+
+Paste in connection string
+
+**Ensure an environment variable for above is used when in production**
+**Database mini project was set up using an environment variable**
+
+Create an instance of pymongo, add app with constructor method.
+
+    mongo = Pymongo(app)
+
+Note: Routing is a string that when attached to  url will redirect to a particular flask function within an application
+
+Add route for /get_tasks
+
+    from flask import Flask, render_template, redirect, request, url_for
+
+Rename hello functon to get_tasks and render template tasks.html
+
+Note: When the application is run, the default function to be called will be get tasks because of the / decorator
+
+Create template:
+*Create templates directory and file tasks.html
+
+Set body as:
+
+    *{% for tasks in tasks %}
+        {{tasks.task_name}}
+        {{task.category_name}}
+        {{tasks.task_description}}
+        {{tasks.is_urgent}}
+        {{task.due_date}}
+    {% endfor %}*
+
+
