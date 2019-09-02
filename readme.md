@@ -69,5 +69,9 @@ In terminal
     git add .
     git commit -m 'Initial commit'
     heroku git:remote -a task-manager-learning-project
-    git push heroku master
+    git push heroku master (fails - needs requirements.txt)
     sudo pip3 freeze --local > requirement.txt
+    git add .
+    git commit -m 'Added requirements'
+    git push heroku master (fails - needs procfile)
+    echo web: python app.py > Procfile
