@@ -171,3 +171,29 @@ Refactor so that tasks.html extends base.html template
 
 * Copy form html from: https://materializecss.com/text-inputs.html
 * Paste into the endblock in addtask.html
+
+### Customising the form
+
+Change col width to 12 from 2 x 6.
+
+Note: Each element has an input field, a label and an image. The input-field class from Materialize provides the styling.
+
+Alter input element's id, name and type. Match name to the associated field name in mongodb.
+
+Change icons to reflect the information we expect.
+
+Change text area input to html5 textarea element.
+
+Put each input field in it's own row.
+
+Add new row for checkbox input.
+
+Paste code for checkbox from: https://materializecss.com/switches.html (Materialize calls them Switches)
+Note: checkboxes only submit form data if they are checked.
+
+Add id and name *is_urgent* to the checkbox
+
+Copy and paste the Task Name row html. Reformat as Datepicker: Use class="datepicker" to add a date picker. Change icon.
+
+Add Datepicker jquery to base.html
+
