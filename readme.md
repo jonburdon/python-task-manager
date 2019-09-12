@@ -172,7 +172,7 @@ Refactor so that tasks.html extends base.html template
 * Copy form html from: https://materializecss.com/text-inputs.html
 * Paste into the endblock in addtask.html
 
-### Customising the form
+### Customising the add form
 
 Change col width to 12 from 2 x 6.
 
@@ -216,5 +216,30 @@ Specify form action in addtask.html line 4
 
     <form action="{{ url_for('insert_task') }}" method="POST" class="col s12">
 
+
+### Create static assets files
+
+Create css directory within static directory. Then style.css
+
+Add link in base.html
+
+    <link rel="stylesheet" href="{{url_for('static', filename="css/style.css")}}" type="text/css">
+
+
+### Editing Tasks
+
+*Adding Edit and Done task buttons*
+
+Edit collapsible header to show two buttons.
+
+Button code from Materialize:
+
+    <a class="waves-effect waves-light btn">button</a>
+
+Add custom style for btn_small to style.css and add style name to tasks.html
+
+Add custom style for task_header and apply in tasks.html
+
+Wrap outmost div in container (in base.html) to improve appearance.
 
 
