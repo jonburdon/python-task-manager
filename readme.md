@@ -154,6 +154,20 @@ Refactor so that tasks.html extends base.html template
 
 ### Binding data from database to the Accordion elements.
 
-Use jinja formatting used before within UL tags.
-Wrap a list item within jinja tags in a For loop.
-Add task description jinja tag in collapsible part of accordion.
+* Use jinja formatting used before within UL tags.
+* Wrap a list item within jinja tags in a For loop.
+* Add task description jinja tag in collapsible part of accordion.
+* copy and paste icon code for 'expand' google icon
+
+### Add additional categories to database so these can be accessed with Flask
+
+### Add UI for Add Task function
+
+* Create addtask.html as child content of base.html
+* Add route for add_task
+* Define function for add task
+
+###
+
+* Copy form html from: https://materializecss.com/text-inputs.html
+* Paste into the endblock in addtask.html
