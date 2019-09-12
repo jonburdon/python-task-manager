@@ -197,3 +197,24 @@ Copy and paste the Task Name row html. Reformat as Datepicker: Use class="datepi
 
 Add Datepicker jquery to base.html
 
+Update icon prefix in addtask.html to a poll.
+Change label to task category
+
+In app.py, find categories to render:
+
+    categories=mongo.db.categories.find())
+
+In addtask.html use for loop to create conditional rendering - each instance of a category in the collection will now be rendered. Set option value to category name to display categories. The option value can then be submitted to the form when the use selects it.
+
+Button code for submit button taken from:
+https://materializecss.com/buttons.html
+Added to addtask.html at end of form, within new row.
+
+Create insert_form function in app.py to post form data to mongodb.
+
+Specify form action in addtask.html line 4
+
+    <form action="{{ url_for('insert_task') }}" method="POST" class="col s12">
+
+
+
