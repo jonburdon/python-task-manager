@@ -278,3 +278,19 @@ Create update_task function in app.py
 Update tasks.html to link to delete_task function with clicked, passing the variable for the task selected.
 
 Create delete_task function in app.py
+
+
+### Display categories
+
+Copy tasks.html to new file categories.html
+
+Change for loop to category in categories, delete due date and description.
+
+Remove div formatting that is no longer needed (accordion will no longer collapse, not needed.)
+Remove old references {{}} from tasks.html
+
+Add edit category function to app.py to got to edit category route, using variable of category name and getting data from mongo.db to match this.
+
+Create edit category.html by repurposing code from edittask.html
+
+Add update category function
