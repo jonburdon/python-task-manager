@@ -294,3 +294,10 @@ Add edit category function to app.py to got to edit category route, using variab
 Create edit category.html by repurposing code from edittask.html
 
 Add update category function
+
+Add delete category function by pasting and refactoring delete task function
+
+Add update_category and add_category functions to app.py
+
+Add button to add category in categories.html
+
