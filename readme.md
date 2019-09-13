@@ -253,3 +253,28 @@ Wrap outmost div in container (in base.html) to improve appearance.
 
 Create edittask.html as copy of addtask.html and link to it from tasks.html
 
+*Editing edittask.html*
+
+Create if statement within cat in categories loop. If category of task selected for editing matches the iteration of the for loop, this will be selected and displayed.
+
+Add code to display task name and description:
+
+    <input id="task_name" name="task_name" type="text" class="validate" value="{{task.task_name}}">
+
+Add if loop for Is Urgent switch to display on or off.
+
+Use jquery in edittask.html to create variable due_date that is formatted correctly for date picker.
+
+Chain methods to id due date, get date using datepicker then select this, specify format and change using event trigger.
+This will inject the data into the form field associated with the date picker.
+
+
+
+Create update_task function in app.py
+
+
+*Delete tasks*
+
+Update tasks.html to link to delete_task function with clicked, passing the variable for the task selected.
+
+Create delete_task function in app.py
