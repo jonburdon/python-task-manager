@@ -243,3 +243,7 @@ Add custom style for task_header and apply in tasks.html
 Wrap outmost div in container (in base.html) to improve appearance.
 
 
+Create function for Edit task in app.py
+
+Create edittask.html as copy of addtask.html and link to it from tasks.html
+
