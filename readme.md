@@ -243,7 +243,13 @@ Add custom style for task_header and apply in tasks.html
 Wrap outmost div in container (in base.html) to improve appearance.
 
 
-Create function for Edit task in app.py
+*Create function for Edit task in app.py*
+
+* set variable to find_one from mongo using task _id to match
+* set variable for all_categories by finding category list from mongo
+* render template with edittask.html and pass variables set above
+* from bson.objectid import ObjectId 
+
 
 Create edittask.html as copy of addtask.html and link to it from tasks.html
 
