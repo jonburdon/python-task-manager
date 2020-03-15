@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"path": "/Users/jon/Documents/flex-playground"
+		},
+		{
+			"path": "/Users/jon/Documents/VSCode"
+		},
+		{
+			"path": "/Users/jon/Documents/VSCode/windy-miller"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "VSCode"
+	}
+}
