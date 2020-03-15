@@ -6,6 +6,8 @@ The procedure was adapted to use VScode on a mac as the development environment,
 
 This is the developers own documentation for the project.
 
+## [View Site on Heroku](https://task-manager-learning-project.herokuapp.com/)
+
 ## Project Aims
 1. Simple task manager app with web user interface for CRUD operations
 2. Task database containing:
