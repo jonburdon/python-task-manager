@@ -92,14 +92,30 @@ Specify IP 0.0.0.0 and Port 5000
 
     sudo pip3 install flask-pymongo
     sudo pip3 install dnspython
+    
+    
+in new file env.py:
+	import os
+	os.environ["MONGO_URI"] = "mongodb+srv://databaseusernameHERE:passwordforthatuserHERE@myfirstcluster-ghyoe.mongodb.net/databasenameHERE?retryWrites=true&w=majority"
 
-in app.py:
+*NOTE* Formatting of connection string carefully. No <> around password, there are THREE places to insert the correct into in to the connection string.
+
+
+in app.py this will read the needed variables from the env.py file, created above):
+
+	from os import path 
+	if path.exists("env.py"):
+    import env
 
     from flask_pymongo import PyMongo
     from bson.objectid import ObjectId
 
-    app.config["MONGO_DBNAME"] = 'task_manager'
-    app.config[MONGO_URI] = '<<CONNECTION STRING WITH DB NAME AND PASSWORD'
+	app.config["MONGO_DBNAME"] = 'windy-millers_bakery'
+	app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
+    
+    
+
+
 
 On Mongo Website: Overview -> Connect -> Connect my app -> Choose Python3.6 or later
 
@@ -301,3 +317,22 @@ Add update_category and add_category functions to app.py
 
 Add button to add category in categories.html
 
+### Add Navbar
+
+Paste navbar from Materialize into <header> in base.html
+
+From Materialize, Extended Navbar with tabs Test 2, copy code for mobile version
+
+    <ul class="sidenav" id="mobile-demo">
+    <li><a href="sass.html">Sass</a></li>
+    <li><a href="badges.html">Components</a></li>
+    <li><a href="collapsible.html">JavaScript</a></li>
+    </ul>
+
+Also paste code for burger icon
+
+    <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      
+
+NOTE: Pasted code from CI tutorial, as version of Materialize has changed since the tutorial:
+ https://github.com/Code-Institute-Solutions/TaskManager/blob/master/07-AddingApplicationNavigation/01-adding_a_navigation_bar/templates/base.html
